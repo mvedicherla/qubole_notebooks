@@ -1,0 +1,253 @@
+{
+  "paragraphs": [
+    {
+      "title": "Create Leaflet Map via Angular",
+      "text": "%angular\n\u003clink rel\u003d\"stylesheet\" href\u003d\"https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css\" /\u003e\n\u003cdiv id\u003d\"map\" style\u003d\"height: 800px; width: 100%\"\u003e\u003c/div\u003e\n\n\u003cscript type\u003d\"text/javascript\"\u003e\nfunction initMap() {\n    var map \u003d L.map(\u0027map\u0027).setView([30.00, -30.00], 3);\n\n    L.tileLayer(\u0027http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\u0027, {\n        attribution: \u0027Map data \u0026copy; \u003ca href\u003d\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e contributors\u0027,\n        maxZoom: 12,\n        minZoom: 3\n    }).addTo(map);\n\n    var el \u003d angular.element($(\u0027#map\u0027).parent(\u0027.ng-scope\u0027));\n    angular.element(el).ready(function() {\n        window.locationWatcher \u003d el.scope().compiledScope.$watch(\u0027data\u0027, function(newValue, oldValue) {\n            angular.forEach(newValue, function(tweet) {\n                L.marker([tweet.lat, tweet.lon]).addTo(map).bindPopup(\"\u003cb\u003e\" + tweet.user + \"\u003c/b\u003e\u003cbr\u003e\" + tweet.tweet);             \n            });\n        })\n    });\n}\n\nif (window.locationWatcher) { window.locationWatcher(); }\n\nif (window.L) { initMap(); }\nelse {\n    var sc \u003d document.createElement(\u0027script\u0027);\n    sc.type \u003d \u0027text/javascript\u0027;\n    sc.src \u003d \u0027https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js\u0027;\n    sc.onload \u003d initMap;\n    sc.onerror \u003d function(err) { alert(err); }\n    document.getElementsByTagName(\u0027head\u0027)[0].appendChild(sc);\n}\n\u003c/script\u003e\n",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 3:31:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479302523262_-1167770764",
+      "id": "20161116-132203_299568547_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\u003clink rel\u003d\"stylesheet\" href\u003d\"https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css\" /\u003e\n\u003cdiv id\u003d\"map\" style\u003d\"height: 800px; width: 100%\"\u003e\u003c/div\u003e\n\n\u003cscript type\u003d\"text/javascript\"\u003e\nfunction initMap() {\n    var map \u003d L.map(\u0027map\u0027).setView([30.00, -30.00], 3);\n\n    L.tileLayer(\u0027http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\u0027, {\n        attribution: \u0027Map data \u0026copy; \u003ca href\u003d\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e contributors\u0027,\n        maxZoom: 12,\n        minZoom: 3\n    }).addTo(map);\n\n    var el \u003d angular.element($(\u0027#map\u0027).parent(\u0027.ng-scope\u0027));\n    angular.element(el).ready(function() {\n        window.locationWatcher \u003d el.scope().compiledScope.$watch(\u0027data\u0027, function(newValue, oldValue) {\n            angular.forEach(newValue, function(tweet) {\n                L.marker([tweet.lat, tweet.lon]).addTo(map).bindPopup(\"\u003cb\u003e\" + tweet.user + \"\u003c/b\u003e\u003cbr\u003e\" + tweet.tweet);             \n            });\n        })\n    });\n}\n\nif (window.locationWatcher) { window.locationWatcher(); }\n\nif (window.L) { initMap(); }\nelse {\n    var sc \u003d document.createElement(\u0027script\u0027);\n    sc.type \u003d \u0027text/javascript\u0027;\n    sc.src \u003d \u0027https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js\u0027;\n    sc.onload \u003d initMap;\n    sc.onerror \u003d function(err) { alert(err); }\n    document.getElementsByTagName(\u0027head\u0027)[0].appendChild(sc);\n}\n\u003c/script\u003e"
+      },
+      "dateCreated": "Nov 16, 2016 1:22:03 AM",
+      "dateStarted": "Dec 1, 2017 3:31:10 PM",
+      "dateFinished": "Dec 1, 2017 3:31:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Import Spark Streaming libraries",
+      "text": "import org.apache.spark.streaming._\nimport org.apache.spark.streaming.twitter._",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 3:31:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479302660069_-1247597677",
+      "id": "20161116-132420_904883552_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nimport org.apache.spark.streaming._\n\nimport org.apache.spark.streaming.twitter._\n"
+      },
+      "dateCreated": "Nov 16, 2016 1:24:20 AM",
+      "dateStarted": "Dec 1, 2017 3:31:16 PM",
+      "dateFinished": "Dec 1, 2017 3:31:17 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Configure Twitter OAuth credentials",
+      "text": "val consumerKey \u003d \"iPibpHlp3CbOmEB8vvy0xY6Ae\"//System.getenv(\"TWITTER_CONSUMER_KEY\")\nval consumerSecret \u003d \"qeSxaHvgeSEjUvtm7P3oPC27apzFbuNyz0EpvgacC2gjeXJisR\" //System.getenv(\"TWITTER_CONSUMER_SECRET\")\nval accessToken \u003d \"139456499-TMd4ISxqOXpNwz2FCSvfjMqsQYGLeacrDhoUnmVf\"//System.getenv(\"TWITTER_API_TOKEN\")\nval accessTokenSecret \u003d\"SkKU1ve7rRczw04nUFGubDopy9nCdok7fa3HThIOCmYJb\"// System.getenv(\"TWITTER_API_TOKEN_SECRET\")\n\nSystem.setProperty(\"twitter4j.oauth.consumerKey\", consumerKey)\nSystem.setProperty(\"twitter4j.oauth.consumerSecret\", consumerSecret)\nSystem.setProperty(\"twitter4j.oauth.accessToken\", accessToken)\nSystem.setProperty(\"twitter4j.oauth.accessTokenSecret\", accessTokenSecret)",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 3:31:20 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479302996459_496923356",
+      "id": "20161116-132956_702631610_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nconsumerKey: String \u003d iPibpHlp3CbOmEB8vvy0xY6Ae\n\nconsumerSecret: String \u003d qeSxaHvgeSEjUvtm7P3oPC27apzFbuNyz0EpvgacC2gjeXJisR\n\naccessToken: String \u003d 139456499-TMd4ISxqOXpNwz2FCSvfjMqsQYGLeacrDhoUnmVf\n\naccessTokenSecret: String \u003d SkKU1ve7rRczw04nUFGubDopy9nCdok7fa3HThIOCmYJb\n\nres1: String \u003d null\n\nres2: String \u003d null\n\nres3: String \u003d null\n\nres4: String \u003d null\n"
+      },
+      "dateCreated": "Nov 16, 2016 1:29:56 AM",
+      "dateStarted": "Dec 1, 2017 3:31:20 PM",
+      "dateFinished": "Dec 1, 2017 3:31:22 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Start (Spark) streaming of (Twitter) tweets",
+      "text": "case class Tweet(user: String, tweet: String, lat: Double, lon: Double)\n\nval ssc \u003d new StreamingContext(sc, Seconds(2))\n\nval tweets \u003d TwitterUtils.createStream(ssc, None).window(Seconds(10))\n\ntweets.foreachRDD(rdd \u003d\u003e {\n    val df \u003d rdd\n      .filter(_.getGeoLocation !\u003d null)\n      .map(t \u003d\u003e Tweet(t.getUser.getName, t.getText, t.getGeoLocation.getLatitude, t.getGeoLocation.getLongitude))\n      \n    var items\u003ddf.collect\n    z.angularBind(\"data\",items)\n     \n})\n\nssc.start()\n",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 3:31:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479303353895_-2135622208",
+      "id": "20161116-133553_241079618_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ndefined class Tweet\n\nssc: org.apache.spark.streaming.StreamingContext \u003d org.apache.spark.streaming.StreamingContext@23763ebe\n\ntweets: org.apache.spark.streaming.dstream.DStream[twitter4j.Status] \u003d org.apache.spark.streaming.dstream.WindowedDStream@505d9364\n"
+      },
+      "dateCreated": "Nov 16, 2016 1:35:53 AM",
+      "dateStarted": "Dec 1, 2017 3:31:26 PM",
+      "dateFinished": "Dec 1, 2017 3:31:30 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Stop (Spark) streaming of (Twitter) tweets",
+      "text": "ssc.stop(true, true)",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 4:43:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479330305948_1384796822",
+      "id": "20161116-210505_1893147246_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 16, 2016 9:05:05 AM",
+      "dateStarted": "Dec 1, 2017 4:43:00 PM",
+      "dateFinished": "Dec 1, 2017 4:43:06 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "",
+      "text": "",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 1, 2017 2:08:04 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1479331098902_1078378817",
+      "id": "20161116-211818_27248234_q_QASPQ7NYBQ1512137230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 16, 2016 9:18:18 AM",
+      "dateStarted": "Dec 1, 2017 2:08:38 PM",
+      "dateFinished": "Dec 1, 2017 2:08:38 PM",
+      "status": "ABORT",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "twitterStream",
+  "id": "QASPQ7NYBQ1512137230",
+  "angularObjects": {
+    "2D2FTR8ZC428381511633849543:shared_process": [],
+    "2CYJKSXEW428381511802282553:shared_process": [
+      {
+        "name": "data",
+        "object": [
+          {
+            "user": "TMJ-SJC Retail Jobs",
+            "tweet": "Interested in a #job in #Marina, CA? This could be a great fit: #hiring #career https://t.co/URxcv8HqFl #CareerArc",
+            "lat": 36.6856293,
+            "lon": -121.796664
+          }
+        ],
+        "noteId": "QASPQ7NYBQ1512137230"
+      }
+    ],
+    "2D1E3GF1D428381511633849548:shared_process": [],
+    "2CZPPZW2N428381511633849539:shared_process": []
+  },
+  "config": {
+    "isDashboard": false
+  },
+  "info": {},
+  "source": "FCN"
+}
