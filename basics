@@ -1,0 +1,165 @@
+{
+  "paragraphs": [
+    {
+      "text": "%sql\n\nselect * from test_opencsv limit 5",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 17, 2017 11:09:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1513550123868_-2137630616",
+      "id": "20171217-223523_1421551587_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Dec 17, 2017 10:35:23 PM",
+      "dateStarted": "Dec 17, 2017 11:09:12 PM",
+      "dateFinished": "Dec 17, 2017 11:09:23 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect a.vendor_id, a.pickup_latitude, sum(b.total_amount) total_amount from nyc_tlc_trips_yellow a\njoin nyc_tlc_trips_yellow_locations b\non a.yearmonth \u003d b.yearmonth\nand a.pickup_longitude \u003d b.pickup_longitude\nand a.dropoff_longitude \u003d b.dropoff_longitude\nwhere a.yearmonth \u003d 201606\ngroup by a.vendor_id, a.pickup_latitude\nlimit 10",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Dec 17, 2017 10:35:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1508644860863_-1023798828",
+      "id": "20171022-040100_712083667_q_53ZGGMN8DY1508644627",
+      "dateCreated": "Oct 22, 2017 4:01:00 AM",
+      "dateStarted": "Nov 27, 2017 5:11:52 PM",
+      "dateFinished": "Nov 27, 2017 5:33:39 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect a.vendor_id, a.pickup_latitude, b.dropoff_longitude, b.total_amount from nyc_tlc_trips_yellow a\njoin nyc_tlc_trips_yellow_locations b\non a.yearmonth \u003d b.yearmonth\nand a.pickup_longitude \u003d b.pickup_longitude\nand a.dropoff_longitude \u003d b.dropoff_longitude\nwhere a.yearmonth \u003d 201606\nlimit 10\n",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Nov 27, 2017 6:41:18 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1511802310155_1231231596",
+      "id": "20171127-170510_1999481557_q_53ZGGMN8DY1508644627",
+      "dateCreated": "Nov 27, 2017 5:05:10 PM",
+      "dateStarted": "Nov 27, 2017 6:41:18 PM",
+      "dateFinished": "Nov 27, 2017 6:41:38 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\ndir",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 5, 2018 1:57:41 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1511807317342_652124251",
+      "id": "20171127-182837_406779066_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "bin\tdev   index.html  local       mnt\t      proc  sbin     sys  var\nboot\tetc   lib\t  lost+found  motd.partFexGo  root  selinux  tmp\ncgroup\thome  lib64\t  media       opt\t      run   srv      usr\n"
+      },
+      "dateCreated": "Nov 27, 2017 6:28:37 PM",
+      "dateStarted": "Jan 5, 2018 1:57:41 AM",
+      "dateFinished": "Jan 5, 2018 1:57:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1515117461425_-555867854",
+      "id": "20180105-015741_653624837_q_53ZGGMN8DY1508644627",
+      "dateCreated": "Jan 5, 2018 1:57:41 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "basics",
+  "id": "53ZGGMN8DY1508644627",
+  "angularObjects": {
+    "2D2FTR8ZC428381511633849543:shared_process": [],
+    "2D29JZZMU428381511633849467:shared_process": [],
+    "2CYJKSXEW428381511802282553:shared_process": [],
+    "2D1E3GF1D428381511633849548:shared_process": [],
+    "2CZPPZW2N428381511633849539:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "looknfeel": "default",
+    "cronExecutingUser": "37245",
+    "cron_updated_by_useremail": "mvedicherla@qubole.com"
+  },
+  "info": {},
+  "source": "FCN"
+}
