@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%sql\n\nselect * from test_opencsv limit 5",
+      "text": "import scala.math._\n \nlog10(1000).toInt\nvar sum \u003d 10.0 + 3.0\n\"The result is \" + sum\nvar myName \u003d \"this is a variable\"\nval yourName \u003d \"this is a constant\"\n",
       "user": "mvedicherla@qubole.com",
-      "dateUpdated": "Dec 17, 2017 11:09:12 PM",
+      "dateUpdated": "Jan 17, 2018 8:24:36 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -16,120 +16,233 @@
           "scatter": {}
         },
         "enabled": true,
-        "editorMode": "ace/mode/sql"
+        "editorMode": "ace/mode/scala"
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1513550123868_-2137630616",
-      "id": "20171217-223523_1421551587_q_53ZGGMN8DY1508644627",
-      "result": {
-        "code": "ERROR",
-        "type": "TEXT",
-        "msg": ""
-      },
-      "dateCreated": "Dec 17, 2017 10:35:23 PM",
-      "dateStarted": "Dec 17, 2017 11:09:12 PM",
-      "dateFinished": "Dec 17, 2017 11:09:23 PM",
-      "status": "ERROR",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%sql\n\nselect a.vendor_id, a.pickup_latitude, sum(b.total_amount) total_amount from nyc_tlc_trips_yellow a\njoin nyc_tlc_trips_yellow_locations b\non a.yearmonth \u003d b.yearmonth\nand a.pickup_longitude \u003d b.pickup_longitude\nand a.dropoff_longitude \u003d b.dropoff_longitude\nwhere a.yearmonth \u003d 201606\ngroup by a.vendor_id, a.pickup_latitude\nlimit 10",
-      "user": "mvedicherla@qubole.com",
-      "dateUpdated": "Dec 17, 2017 10:35:16 PM",
-      "config": {
-        "colWidth": 12.0,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {}
-        },
-        "enabled": true,
-        "editorMode": "ace/mode/sql"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1508644860863_-1023798828",
-      "id": "20171022-040100_712083667_q_53ZGGMN8DY1508644627",
-      "dateCreated": "Oct 22, 2017 4:01:00 AM",
-      "dateStarted": "Nov 27, 2017 5:11:52 PM",
-      "dateFinished": "Nov 27, 2017 5:33:39 PM",
-      "status": "FINISHED",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%sql\n\nselect a.vendor_id, a.pickup_latitude, b.dropoff_longitude, b.total_amount from nyc_tlc_trips_yellow a\njoin nyc_tlc_trips_yellow_locations b\non a.yearmonth \u003d b.yearmonth\nand a.pickup_longitude \u003d b.pickup_longitude\nand a.dropoff_longitude \u003d b.dropoff_longitude\nwhere a.yearmonth \u003d 201606\nlimit 10\n",
-      "user": "mvedicherla@qubole.com",
-      "dateUpdated": "Nov 27, 2017 6:41:18 PM",
-      "config": {
-        "colWidth": 12.0,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {}
-        },
-        "enabled": true,
-        "editorMode": "ace/mode/sql"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1511802310155_1231231596",
-      "id": "20171127-170510_1999481557_q_53ZGGMN8DY1508644627",
-      "dateCreated": "Nov 27, 2017 5:05:10 PM",
-      "dateStarted": "Nov 27, 2017 6:41:18 PM",
-      "dateFinished": "Nov 27, 2017 6:41:38 PM",
-      "status": "FINISHED",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%sh\ndir",
-      "user": "mvedicherla@qubole.com",
-      "dateUpdated": "Jan 5, 2018 1:57:41 AM",
-      "config": {
-        "colWidth": 12.0,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {}
-        },
-        "enabled": true,
-        "editorMode": "ace/mode/sh"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1511807317342_652124251",
-      "id": "20171127-182837_406779066_q_53ZGGMN8DY1508644627",
+      "jobName": "paragraph_1516220026125_-1095213746",
+      "id": "20180117-201346_1057328090_q_53ZGGMN8DY1508644627",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "bin\tdev   index.html  local       mnt\t      proc  sbin     sys  var\nboot\tetc   lib\t  lost+found  motd.partFexGo  root  selinux  tmp\ncgroup\thome  lib64\t  media       opt\t      run   srv      usr\n"
+        "msg": "\nimport scala.math._\n\nres41: Int \u003d 3\n\nsum: Double \u003d 13.0\n\nres42: String \u003d The result is 13.0\n\nmyName: String \u003d this is a variable\n\nyourName: String \u003d this is a constant\n"
       },
-      "dateCreated": "Nov 27, 2017 6:28:37 PM",
-      "dateStarted": "Jan 5, 2018 1:57:41 AM",
-      "dateFinished": "Jan 5, 2018 1:57:42 AM",
+      "dateCreated": "Jan 17, 2018 8:13:46 PM",
+      "dateStarted": "Jan 17, 2018 8:24:36 PM",
+      "dateFinished": "Jan 17, 2018 8:24:37 PM",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val age \u003d 120\n\nif (age \u003c 18) {\n    println(\"can\u0027t vote\")\n} else if (age \u003e\u003d18 \u0026\u0026 age \u003c\u003d 110){\n    println(\"can vote\")\n} else {\n    printf(\"Really?\")\n}",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:34:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1516220744987_1044015854",
+      "id": "20180117-202544_244620844_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nage: Int \u003d 120\nReally?"
+      },
+      "dateCreated": "Jan 17, 2018 8:25:44 PM",
+      "dateStarted": "Jan 17, 2018 8:34:51 PM",
+      "dateFinished": "Jan 17, 2018 8:34:52 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def main(args: Array[String])\n{\n    var i \u003d 0\n    while (i \u003c\u003d 10) {\n        println(i)\n        i +\u003d 1\n    }\n}",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:36:52 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1516221295696_413206091",
+      "id": "20180117-203455_10157000_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nmain: (args: Array[String])Unit\n"
+      },
+      "dateCreated": "Jan 17, 2018 8:34:55 PM",
+      "dateStarted": "Jan 17, 2018 8:36:52 PM",
+      "dateFinished": "Jan 17, 2018 8:36:53 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "   var i \u003d 0\n    while (i \u003c\u003d 10) {\n        println(i)\n        i +\u003d 1\n    }",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:37:24 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1516221436448_327824128",
+      "id": "20180117-203716_1237036086_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ni: Int \u003d 0\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"
+      },
+      "dateCreated": "Jan 17, 2018 8:37:16 PM",
+      "dateStarted": "Jan 17, 2018 8:37:24 PM",
+      "dateFinished": "Jan 17, 2018 8:37:25 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val randLetters \u003d \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n\nfor (i \u003c- 0 until randLetters.length) {\n    println(randLetters(i))\n}",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:40:04 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1516221543264_1411581869",
+      "id": "20180117-203903_1489752509_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nrandLetters: String \u003d ABCDEFGHIJKLMNOPQRSTUVWXYZ\nA\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ\n"
+      },
+      "dateCreated": "Jan 17, 2018 8:39:03 PM",
+      "dateStarted": "Jan 17, 2018 8:40:04 PM",
+      "dateFinished": "Jan 17, 2018 8:40:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val aList \u003d List (\"A\", \"B\", \"C\", \"D\", \"E\", \"F\")\n\nfor (i \u003c- aList) {\n    println(\"List Items: \" + i)\n}",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:42:03 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1516221660926_-1637382953",
+      "id": "20180117-204100_114149067_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\naList: List[String] \u003d List(A, B, C, D, E, F)\nList Items: A\nList Items: B\nList Items: C\nList Items: D\nList Items: E\nList Items: F\n"
+      },
+      "dateCreated": "Jan 17, 2018 8:41:00 PM",
+      "dateStarted": "Jan 17, 2018 8:42:03 PM",
+      "dateFinished": "Jan 17, 2018 8:42:05 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "\nconst sparkJobInput \u003d {\n    command_type: \"SparkCommand\",\n    language: \"command_line\",\n    cmdline: submitCmd,\n    label: label,\n    can_notify: true\n  };\n\n  const postOptions \u003d {\n        headers: {\n          \"X-Auth-Token\": token,\n          \"content-type\": \"application/json\"\n        },\n        json: true,\n        body: JSON.stringify(sparkJobInput)\n      };\n\n  return got\n    .post(util.getQuboleUrl(\"v1.2\", `commands/`).api, postOptions)\n    .then(data \u003d\u003e {\n      const commandID \u003d data.body.id;\n      const resp \u003d {\n        link: util.getQuboleUrl(\"v2\", `analyze?command_id\u003d${commandID}`).link,\n        commandID: commandID,\n        submittedOptions: sparkJobInput\n      };\n      return resp;\n    });",
+      "user": "mvedicherla@qubole.com",
+      "dateUpdated": "Jan 17, 2018 8:09:49 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1515117461425_-555867854",
+      "id": "20180105-015741_653624837_q_53ZGGMN8DY1508644627",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\n\n\n\u003cconsole\u003e:3: error: identifier expected but string literal found.\n    command_type: \"SparkCommand\",\n                  ^\n"
+      },
+      "dateCreated": "Jan 5, 2018 1:57:41 AM",
+      "dateStarted": "Jan 17, 2018 8:09:49 PM",
+      "dateFinished": "Jan 17, 2018 8:09:49 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -138,9 +251,9 @@
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1515117461425_-555867854",
-      "id": "20180105-015741_653624837_q_53ZGGMN8DY1508644627",
-      "dateCreated": "Jan 5, 2018 1:57:41 AM",
+      "jobName": "paragraph_1516219400703_-1913667125",
+      "id": "20180117-200320_1559131764_q_53ZGGMN8DY1508644627",
+      "dateCreated": "Jan 17, 2018 8:03:20 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
